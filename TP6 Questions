@@ -1,37 +1,32 @@
 1. What is clean code? What is the role played by refactoring one’s code?
 
-Clean code is lignes that can be understood by other developpers.
-It contains minimal of code to reduce repeditions and easier to abordate.
-All test should pass.
-Clean code introduce less work in maintenance.
-Refactoring others one code enable to improve the quality of code and to make it more underestandable for an extern point of view.
-
+Clean code is made for that it can be understood by any other developers. It contains essential of code to reduce the repetitions and it is important that all tests should pass. The finality of clean is to reduce the amount of work in maintenance. Refactoring others one code enable to improve the quality of code and to make it more understandable for an extern point of view.
 
 2. Do you think you can “over-refactor” and do too much? How?
  
-The issue with over-refactor is to reduce too much lign of code to broke something. You may want to replace some classes definition.
+The issue with over-refactor is to reduce too many lines of code, you may risk to break something. For example, if you replace a class definition you could have modified a method and it can't work anymore.
 
 3. What is a code smell? Why should you bother?
 
-Code smell is a way of writing code that interprete a trend that you can find. For example, your code could have the trend to coupling between classes too much or the definition of classes or methods become too long that they are harder to work with. Those code smell implies that there is better ways to program it and to improve code quality.
+Code smell is a way of writing code that interprets a trend that you can find. For example, your code could have the trend to coupling between classes too much or the definition of classes or methods become too long that they are harder to work with. Those code smell implies that there are better ways to program it and to improve code quality.
 
 4. Can you identify a few code smells in the original GuildedRose?
 
-Bloaters: long methods UpgradeQuality
-Dispensables: Comments None
-Duplicate Code we repeate legendary items don't loose quality multiple times 
-Data Class Item class
+Bloaters: UpgradeQuality is a quite long methods
+Dispensables: - They are any comments
+- Duplicate Code we repeat legendary items don't loose quality multiple times 
+- Item class is a data class
 Speculative Generality: Conjured item does not work properly so we can delete it
 
 5. What are some refactoring techniques you could have used in the GuildedRose?
 
 Extract Method: UpgradeQuality
-Extract Classs: Split Item class into multiple classes
+Extract Class: Split Item class into multiple classes
 Consolidate Conditional Expression: all of the if...else to switch on items type
 Consolidate Duplicate Conditional Fragments: Move condition on maximum quality outside of the conditional because it is always true
 Replace Nested Conditional with Guard Clauses: UpgradeQuality
-Replace Conditional with Polymorphism: We could have overload method UpgradeQuality in subclasses
-Rename Method: UpgradeQuality the name is false it dont always upgrade the quality to UpdateQuality is even better
+Replace Conditional with Polymorphism: We could have overloaded method UpgradeQuality in subclasses
+Rename Method: UpgradeQuality the name is false it don't always upgrade the quality to UpdateQuality is even better
 Add Parameter: We could add the item parameter to the methods
 Extract Subclass: From Item to subclasses in function of their category
 
@@ -41,17 +36,15 @@ Exercice 2:
 a. When should you use one?
 b. When shouldn’t you?
 
-A Design Patter is a way of writing code to resolve a specific problem using a specific way of writing class. It could be class that we only need once, Singleton or class that are designed to be defined in subclasses, we can think about using Factory.
-We can use design patterns when we have repetitions of the same design of writing classes. We could generalize it by using Design Pattern.
-When we define a class that have a very precise function and it is used once, we don't necessarly need design pattern. 
+A Design Patter is a way of writing code to resolve a specific problem using a specific way of writing class. It could be class that we only need once (Singleton) or class that can be defined in subclasses (Factory). We can use design patterns when we have repetitions of the same design of writing classes. We could generalize it by using design patterns. When we define a class that have a very precise function and it is used once, we don't necessarily need design pattern. 
 
 2. Write a small program that build a pizza with various toppings using the builder pattern. Why is this a good idea? Think about scalability for instance
 
-We can esaily create various type of Pizza just by change their attributes. It is also easy to understand this type if design pattern for code rewiew which privide a better quality in code. We are not limited in the way we create pizzas we just ahve to be creative.
+We can easily create various types of Pizza just by changing their attributes. It is also easy to understand design pattern for code rewiew, which provide a better quality in code. We are not limited in the way we create pizzas we just have to be creative.
 
 3. Find an original idea to implement a decorator pattern (not the one from the website). Can you think of any limitations? No need to code here.
 
-We can implement a decorator pattern that enable to add to a class attributes "read-only" to precise the definition of a class. it's hard to found a new design pattern because of the most useful use case has already been created.
+We can implement a decorator pattern that enables to add to a class attributes "read-only" to precise the definition of a class. It's hard to find a new design pattern because of the most useful use case has already been created.
 
 4. Write a small program to implement the behavioral design pattern of your choice. Once again, do not use the example given by the website, but feel free to use them as guidance.
 
